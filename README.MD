@@ -25,6 +25,9 @@ These are my "good ideas" for engineering standards and practices:
     From the movie Dogma 1999
 
 
+### Landing Page Links
+* A place to put links that are specific to your company/project 
+* []()
 
 ### General Practices
 * [General Code Standards](./General_Practices/General_Code_Standards.MD)
@@ -61,10 +64,6 @@ These are my "good ideas" for engineering standards and practices:
 * [Micronaut Basics](./Presentations/Micronaut_Basics.MD)
 * [Testing](./Presentations/Testing.MD)
 * [Intellij](./Presentations/Intellij.MD)
-
-### Landing Page Links
-* A place to put links that are specific to your company/project 
-* []()
 
 
 ## Disclaimers: 
