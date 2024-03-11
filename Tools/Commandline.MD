@@ -1,7 +1,7 @@
 ### Commandline tips/tricks
 
 ## Aliases
-Aliases make your commandline quicker and more efficient, plus they act as documentation of commonly used commands which you can get by typing:
+Aliases make your command line quicker and more efficient, plus they act as documentation of commonly used commands which you can get by typing:
 ```
 alias
 ```
@@ -71,7 +71,7 @@ alias code='flatpak run com.visualstudio.code'
 ## bash tricks
 
 * [commandline fu](https://www.commandlinefu.com/commands/browse)
-* [awk tutorial](https://youtu.be/FbSpuZVb164?si=rnGW51Z4y3vxtkoE) even though I consider regexes as write only code
+* [awk tutorial](https://youtu.be/FbSpuZVb164?si=rnGW51Z4y3vxtkoE) Even though I consider regexes as write-only code
 
 ### Port Forwarding
 ```
