@@ -4,7 +4,7 @@ The following are some guiding principles to think about when you are coding. Th
 If it makes sense to question and possibly update these.
 
 ## Consistency
-All code standards have one goal consistency. If your code is consistent than it will be easier to reason about and maintain. 
+All code standards have one goal consistency. If your code is consistent then it will be easier to reason about and maintain. 
 
 It also makes it when someone new joins the team they can pick up the standards and stay consistent with the code base.
 
@@ -17,48 +17,48 @@ You're not going to need it. I.E. don’t write code you think you are going to 
 code with extra unnecessary code, that only serves to confuse and misdirect people who have to maintain it after you.
 
 ## DRY
-Do not Repeat Yourself. Generally it’s good to not have repeated code, because you will end up having to maintain two implementations of the same code. When 
+Do not Repeat Yourself. Generally, it’s good to not have repeated code, because you will end up having to maintain two implementations of the same code. When 
 appropriate abstract to a function, method, service/bean, plugin, or library, that can be reused. That being said there are times when more than one 
 implementation is warranted like where you would have to add a lot of parameters to the signature in order to have one implementation. In general, you want to 
-limit the number of parameters you have for a function/method, so that it is easier to fully test. So this can be a balancing act at times.
+limit the number of parameters you have for a function/method so that it is easier to fully test. So this can be a balancing act at times.
 
-One notable exception is mirrored frontend and backend validations, because the backend can never trust the frontend/user input. The frontend validation are
+One notable exception is mirrored frontend and backend validations because the backend can never trust the frontend/user input. The frontend validation are
 usually in place to give a better user experience and for their convenience.
 
 
 ## You're not Google
-Don't do something or adopt something just because a big company does it. You are not that big company and whatever solution they are using maybe overkill for 
-what you are doing and cause you more time and headache then if you did it another simpler way. That's not to say that a big company won't release a tool,
-or have a process that could be useful to you. Do your research before adopting any new tool, process or library and have good arguments to why you are going
-to uses them. It also usually strengthens your argument if you also include where the new process, tool, or library has weaknesses or trade-offs, because all
+Don't do something or adopt something just because a big company does it. You are not that big company and whatever solution they are using may be overkill for 
+what you are doing and cause you more time and headache than if you did it another simpler way. That's not to say that a big company won't release a tool,
+or have a process that could be useful to you. Do your research before adopting any new tool, process, or library, and have good arguments as to why you are going
+to use them. It also usually strengthens your argument if you also include where the new process, tool, or library has weaknesses or trade-offs because all
 choices do.
 
 ## Follow industry standards and practices
 In general, it is good to follow industry standards and practices, so that you have a consistent code base where new people can pick up what you are doing because
-what you are doing follows standards. One caveat to this are these standards are written by people, thus fallible and sometime incomplete. There are also 
+what you are doing follows standards. One caveat to this is these standards are written by people, thus fallible and sometimes incomplete. There are also 
 sometimes competing standards(e.g. config formats), and disagreements(spaces vs tabs). When you deviate from established standards, or if one doesn't exist
-make your own standard, document it and state why you are going with that standard.
+make your own standard, document it, and state why you are going with that standard.
 
 ## Generated Code
-Code generators, AI/ChatGPT/Large language models are becoming more prevent as tools, however they are just that tools. They do not excuse
-you from actually looking at what they generate and making sure that it's following coding standards, is readable, maintainable and most 
+Code generators, AI/ChatGPT/Large language models are becoming more prevent as tools, however, they are just that, tools. They do not excuse
+you from actually looking at what they generate and making sure that it's following coding standards, is readable, maintainable, and most 
 importantly actually works. Generators can save time and effort, but it is incumbent on you to make sure that when they hallucinate or
 produce garbage, you don't put that garbage in the code base.
 
 ## Tabs vs Spaces
-For your company just choose a lane and stick to it. Both is not the answer, especially in the same file. Both can actually get you into
+For your company just choose a lane and stick to it. Both are not the answer, especially in the same file. Both can actually get you into
 trouble if you have to deal with Python or Yaml, which have significant whitespace.
 
 Opinion: I prefer spaces because they are universal and work everywhere including Yaml, which doesn't support tabs. If you're  in DevOps a lot
-of things use Yaml for configuration, so in the case you might have to uses spaces. If you turn on draw
-white space in your editor because you are dealing with a programing languages or config format that has significant white space you may
+of things use YAML for configuration, so in this case, you might have to use spaces. If you turn on draw
+white space in your editor because you are dealing with a programming language or config format that has significant white space you may
 find that one representation is easier to read than another, and while I think that breaks down more to preference I still prefer spaces.
 
-Tabs do have there advantages in that you can configure
+Tabs do have their advantages in that you can configure
 the amount of space displayed in an editor, and anecdotally I've heard that Tabs are better for the visually impaired.
 
 ## Class size
-While this varies a lot between programing languages, because of verbosity, a good rule of thumb is to keep your classes below 500 lines for 
+While this varies a lot between programming languages, because of verbosity, a good rule of thumb is to keep your classes below 500 lines for 
 Groovy or 1000 lines for Java. If you are going beyond that you should think about refactoring. Large classes are harder to keep in your head,
 and reason about. 
 
@@ -71,7 +71,7 @@ lines of code:
 especially with syntax checking turned on. 
 
 ## Method size
-In general a method shouldn't be longer than one 1080p screen length. The reason for this is that you can see the whole method on one screen
+In general, a method shouldn't be longer than one 1080p screen length. The reason for this is that you can see the whole method on one screen
 without scrolling, and ensure that you are not just creating one big method. A method should also do one thing or set of things, this makes
 them easier to reason about and test. 
 
@@ -85,7 +85,7 @@ become their own document that goes together.
 ---
 
 ## Code standards and Guidelines
-Never eat an exceptions without a really good reason, which should be documented in the code, and code reviewed to see if there might be a better way.
+Never eat an exception without a really good reason, which should be documented in the code, and code reviewed to see if there might be a better way.
 
 Don't do this:
 ```
@@ -112,8 +112,8 @@ try{
 }
 ```
 ---
-In general, it is better not to wrap and rethrow and exception, but in a case where you have to make sure you include the original exception
-otherwise you loose the stacktrace making bugs harder to track down.
+In general, it is better not to wrap and rethrow an exception, but in a case where you have to make sure you include the original exception
+otherwise, you lose the stacktrace making bugs harder to track down.
 
 Don't do this:
 ```
@@ -131,7 +131,7 @@ Do this instead:
 
 ---
 
-Use white space to make the code easier to read. For example there should be a line of whitespace around classes and statements(if, switch, while, etc). Also 
+Use white space to make the code easier to read. For example, there should be a line of whitespace around classes and statements(if, switch, while, etc). Also, 
 consider adding white space to break up groups of things in code. Here is a bad and good example, although don’t use this as an example for variable naming:
 
 Bad example:
@@ -264,7 +264,7 @@ class SomeClass2 {
 
 If you can avoid it don't have inner classes or enums. Closures and Lambdas have mostly replaced every having the need for inner classes. Inner classes can
 create confusing code that is harder to read and generally leads to class files that are too long. Just break the class or enum out to another file. Breaking 
-classes and enums out to separate files make them easier to find and reuse. 
+classes and enums out to separate files makes them easier to find and reuse. 
 
 ---
 
@@ -272,42 +272,42 @@ Avoid using magic numbers, or inline strings, in your final code. Instead, prefe
 
 ---
 
-Avoid bit masks or obscure codes. There was a time when storage was expensive, and every bit counted, but for most business software we are beyond that, and
-having things like bit masks can code just makes your code harder to read. Instead, use enums, or store a string that you can reconstitute to an enum.
+Avoid bit masks or obscure codes. There was a time when storage was expensive and every bit counted, but for most business software we are beyond that, and
+having things like bit masks in code just makes it harder to read. Instead, use enums, or store a string that you can reconstitute to an enum.
 
 ---
 
 Functions/methods should in general be short and testable. This is not to say go crazy and make everything one line long, there is a balance that needs to be 
 struck. There are reasons to have a longer method, but if your method is more than one screen long, it probably has too much going on in it. One exception might
-be a switch with many conditions, where each condition delegates to another method, i.e. not method onto itself. The reason you want shorter methods is that 
-they are easier to read and reason about. However, if you go to the extreme,  where you have all one-liners that chain on to each other you can get into a 
-situation where it’s hard to reason about the code because you are bouncing around method to method. So this is a balancing act where you will have to use your 
+be a switch with many conditions, where each condition delegates to another method, i.e. not a method onto itself. The reason you want shorter methods is that 
+they are easier to read and reason about. However, if you go to the extreme,  where you have all one-liners that chain onto each other you can get into a 
+situation where it’s hard to reason about the code because you are bouncing around from method to method. So this is a balancing act where you will have to use your 
 judgment.
 
 ---
 
-All functions/methods must have javadoc documentation, explaining what the method is for, what are its inputs and outputs. This makes it easier to figure out 
+All functions/methods must have Javadoc documentation, explaining what the method is for, what are its inputs and outputs. This makes it easier to figure out 
 what a method is for, and we can generate documentation from it.
 
 ---
 
-Naming is hard, but when naming functions/method/classes/packages/Grails artifacts(Controller, service, domains, etc) try to follow the conventions of 
+Naming is hard, but when naming functions/methods/classes/packages/Grails artifacts(Controller, service, domains, etc) try to follow the conventions of 
 Java/Groovy/Grails/Micronaut for them, and use whole words rather than partial words. 
 
-Bad example but SomeString instead of someStr. Some exceptions that you can use are well known acronyms like URL and URI. Using whole words can make variable 
-names somewhat self documenting. Also try to make the name somewhat concise and don’t follow the spring convention of using whole sentences like 
+Bad example but SomeString instead of someStr. Some exceptions that you can use are well-known acronyms like URL and URI. Using whole words can make variable 
+names somewhat self-documenting. Also, try to make the name somewhat concise and don’t follow the spring convention of using whole sentences like 
 ProjectContractChargingPeriodProjectAccountReferenceVM.
 
-What to do about DTOs? I have two suggestions a postfix of `Data` or `Command` like `PersonData` or `PersonCommand` Both are simple and somewhat short `Data` 
-does imply a Data transfer object without spelling it out. Also, you could add postfix to `Data` of `in` or `out` to denote if that data object is 
+What to do about DTOs? I have two suggestions for a postfix of `Data` or `Command` like `PersonData` or `PersonCommand` Both are simple and somewhat short `Data` 
+does imply a Data transfer object without spelling it out. Also, you could add a postfix to `Data` of `in` or `out` to denote if that data object is 
 specifically used for taking in data or pushing it out, i.e. `DataIn`, `DataOut`. 
 
 `Command`come from Grails/Micronaut where that is what they decided to call DTOs used to bind parameters in controllers.
 
-Avoid naming impedance mismatch. This means try to be consistent with naming things through the layers of code. For example if in the front
-end you have a field called postalCode, have a data object that binds it as postalCode, and a model/domain object that calls is postalCode
-and a database column that calls it postal_code. This gives you consistency where I can guess the sql that I'm going to run to look in up
-in the db, but if you named is zip in the db that consistency falls apart.
+Avoid naming impedance mismatch. This means trying to be consistent with naming things through the layers of code. For example, if in the front
+end, you have a field called postalCode, have a data object that binds it as postalCode, and a model/domain object that calls it postalCode
+and a database column that calls it postal_code. This gives you consistency where I can guess the SQL that I'm going to run to look it up
+in the db, but if you named it zip in the db that consistency falls apart.
 
 Naming conventions
 * Packages all lowercase, period separated, usually including the company name for uniqueness. example: com.yourcompany.security
@@ -328,11 +328,11 @@ and include that in all your repositories. This way you should have consistent s
 ---
 
 Include working run configurations in every project in a folder that can be copied and used by people new to the company/project. This is so you don't have
-to pass these around to new people like it's tribal knowledge. Alternatively you can have them spelled out in a `README.MD` file.
+to pass these around to new people like it's tribal knowledge. Alternatively, you can have them spelled out in a `README.MD` file.
 
 ---
 
-Keep the `README.MD`/guides that are in each project upto date, and make sure they work periodically.
+Keep the `README.MD`/guides that are in each project up to date, and make sure they work periodically.
 
 ---
 
@@ -340,14 +340,14 @@ Write unit tests for code for things that are easy to unit tests, and integratio
 find yourself trying to mock too many things, that’s a sign that you should probably be using an integration test instead of a unit test. 
 Some things like file interactions and direct SQL calls don’t work in unit tests so those should have integration tests. 
 
-There was a time that we preferred unit, over integration tests, because apps took too long to load, but with Grails 3 and 4 that has changed 
+There was a time when we preferred unit, over integration tests, because apps took too long to load, but with Grails 3 and 4 that has changed 
 quite a bit and now you should prefer integration tests that are closer to testing how the code will actually be used.
 
-Try to not make your tests brittle. Interaction based unit testing should be used sparingly, in dynamic cases that warrant it, as it can create brittle unit tests.
+Try to not make your tests brittle. Interaction-based unit testing should be used sparingly, in dynamic cases that warrant it, as it can create brittle unit tests.
 
 ---
 
 Move away from building war files and deploying to Tomcat. Today there are a lot of benefits to building as a jar/container with a jar in it rather than a war.
 The Jar often contains an embedded version of Tomcat/Netty/etc that has been vetted and works with the version of the framework you are using. With the embedded
-server you also get the following benefits: it works the same in dev as it does in production, the configuration is the same, you don't have to worry about
+server you also get the following benefits: it works the same in dev as it does in production, the configuration is the same, and you don't have to worry about
 conflicting libraries dropped in a lib folder.
