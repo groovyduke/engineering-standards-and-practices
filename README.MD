@@ -1,7 +1,7 @@
 # Engineering Standards, Practices and Musings
 
-This is a  template for a landing page and engineering standard, practices and my own musings about various engineering related topics.
-I'm collecting these thoughts and standard here, because I have scattered notes about this subject, have had numerous conversations,
+This is a  template for a landing page and engineering standards, practices, and my own musings about various engineering related topics.
+I'm collecting these thoughts and standards here, because I have scattered notes about this subject, have had numerous conversations,
 and have added these to various company wikis over the years. However, I wanted my own collection that I could take and evolve independently 
 of one opportunity to another, and that anyone could pick up and use if they so choose.
 
@@ -9,7 +9,7 @@ I decided that I wanted to make this public domain, so feel free to clone it and
 
 If you do take this as a template I suggest that you keep the following statement:
 
-This is a living document that should periodically be revisited, updated and changed to reflect your current standards, not all 
+This is a living document that should periodically be revisited, updated, and changed to reflect your current standards, not all 
 standards will make sense for all organizations, and what makes sense today might not make sense tomorrow. Don't just blindly apply these
 standards question them if they don't make sense, and update them as need be in your development organization.
 
