@@ -10,7 +10,7 @@ Resources:
 Don’t use def unless you know you are going to do something dynamic 
 
 Reason
-If you know the type of the variable you are going to use then use it This helps with ide integration, readability, and the ability to port 
+If you know the type of variable you are going to use then use it. This helps with ide integration, readability, and the ability to port 
 to @CompileStatic if needed. If you don’t know the type of something and can’t find it in documentation(like Spring), use def temporarily 
 set a breakpoint and then check the .class.name, if that has an error it’s probably a map, and you can use `.getClass().name` In method 
 signatures, always put the types of the variable names, unless you are specifically using a dynamic type. If you are using a dynamic type
