@@ -243,22 +243,22 @@ When testing in Grails there are three type of tests you should be aware of:
 * Functional tests(usually Geb tests handled by QA)
 
 
-There was a time that you might have shied away from using integration tests, because they took to long to load, and unit tests at the time gave us
-more for our time. With modern version of Grails this is no longer the case, and integration tests should be written to fill in the gaps
-of unit tests, and make it so that you aren't making ridiculous unit test that have to mock out everything.
+There was a time that you might have shied away from using integration tests, because they took too long to load, and unit tests at the time gave us
+more for our time. With modern versions of Grails, this is no longer the case, and integration tests should be written to fill in the gaps
+of unit tests, and make it so that you aren't making ridiculous unit tests that have to mock out everything.
 
 For integration test you should definitely look into test containers, to make those tests easier to write and more reliable because they 
-have a base database that gets reset everytime they are run.
+have a base database that gets reset every time they are run.
 
 When mocking going forward instead of using Expandos you should use Maps converted as objects, as Expandos can't be assigned to typed objects,
-which you should be using more of that. to use maps to mock out a service you could do something like this:
+which you should be using more of. To use maps to mock out a service you could do something like this:
 ```
 SomeService someService
 SomeSubService someSubSerive
 ...
 
 SomeSubService mockSomeSubSerivce = [
-    someMethod: {String param 1, int param2-> //These params must match the signature or the orginal method exactly.
+    someMethod: {String param 1, int param2-> //These params must match the signature or the original method exactly.
         //add the code you would like to stand in for the method code.
         //return with the type of the original method, or omit return for void methods.
     }
@@ -299,12 +299,12 @@ during a test. This kind of testing should be the exception to the rule, and sho
 be easily tested any other way. The reason for this is that interaction tests can make a test particularly brittle and prone to failure, 
 when the code is changed/updated/extended.
 
-When fixing bugs, this is another time when writing tests is a good idea, because you can write a test that tests for the conditions of a
-bug, and when you fix that bug, it will that the conditions are present. This has bonus effect of possibly preventing a regression, if the
+When fixing bugs, this is another time when writing tests is a good idea because you can write a test that tests for the conditions of a
+bug, and when you fix that bug, it will that the conditions are present. This has a bonus effect of possibly preventing a regression, if the
 conditions are reintroduced because the test should fail.
 
 ### Integration testing 
-For integration test we should use test containers for the db and Restassured for a rest client. Restassured gives us hook for if we want to 
+For integration tests, we should use test containers for the DB and Restassured for a rest client. Restassured gives us hook for if we want to 
 use Spring RestDocs to document the API. See this example for more details: 
 [rest-docs: A sample app demonstrating Spring Rest Docs and Test Containers with a Grails app.](https://github.com/groovyduke/rest-docs)
 ---
