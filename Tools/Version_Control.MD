@@ -1,16 +1,16 @@
 # Version Control / Git
 There was a time when I would have to argue and push for Git, but it has pretty much become the de facto standard at this point and I haven't
-seen anything even come close to attempting to challenge it in resent years.
+seen anything even come close to attempting to challenge it in recent years.
 
 ## Tools
-I prefer to use git mostly from the commandline with the default tool and the two UIs  `git gui`(for staging and committing) and 
+I prefer to use git mostly from the command line with the default tool and the two UIs  `git gui`(for staging and committing) and 
 `gitk`(for viewing and search history)
 
 To install git go [here: git-scm.com](https://git-scm.com/)
 
-There are many merge tools, and I've tried a bunch, but I've found that `Intellij` works the best, so I use it as my merge tool, which works
-well because it's also my IDE. Intellij also has a right click menu on files that allow you to pull up history or compare with another
-branch from history. You can right-click in the left gutter and hav intellij to a git blame inline. You can also select a section of code
+There are many merge tools, and I've tried a bunch, but I've found that `IntelliJ` works the best, so I use it as my merge tool, which works
+well because it's also my IDE. Intellij also has a right-click menu on files that allows you to pull up history or compare with another
+branch from history. You can right-click in the left gutter and have IntelliJ to a Git blame inline. You can also select a section of code
 and have it find the history for the selection.
 
 ## Tutorials and Presentations
@@ -25,18 +25,18 @@ I would say it's a good idea to not stay on a feature branch for too long before
 that if you don't stay of a feature branch for too long using rebase on pull is very usable and maintains a cleaner history. If you stay
 on a feature branch for too long and you develop merge issues rebase can be a pain.
 
-**Never rebase anything that has already been pushed to a integration repository like GitHub.**
+**Never rebase anything that has already been pushed to an integration repository like GitHub.**
 
-Most places I've worked either followed the fork pr and merge approach or the git flow approach. At this point I don't see one as 
+Most places I've worked either followed the fork pr and merge approach or the git flow approach. At this point, I don't see one as 
 necessarily that much better than the other, but you should make sure to clean up merged branches on the server, so you don't have
 a lot of extra unnecessary branches. Deleting the merge branch on merge is very common.
 
 ## Pull Requests
-Pull request are a good place to do code reviews
+Pull requests are a good place to do code reviews
 
 
 ## Tagging
-Evey release should be tagged, so it's easy to get back to.
+Every release should be tagged, so it's easy to get back to.
 
 ## Git Config
 Here is a copy of my git config I have a bunch of aliases to make typing quicker and easier.
