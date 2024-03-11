@@ -3,31 +3,31 @@
 Resources:
 * [Groovy Language Documentation](https://docs.groovy-lang.org/latest/html/documentation/) 
 * [Groovy Style Guide](https://groovy-lang.org/style-guide.html)
-* [Groovy Resources List](./Original_Groovy_Resources.MD)
+* [Groovy Resources List](./../Original_Groovy_Resources.MD)
 
 ---
 
 Don’t use def unless you know you are going to do something dynamic 
 
 Reason
-If you know the type of the variable you are going to use then use it This helps with ide integration, readability and the ability to port 
+If you know the type of the variable you are going to use then use it This helps with ide integration, readability, and the ability to port 
 to @CompileStatic if needed. If you don’t know the type of something and can’t find it in documentation(like Spring), use def temporarily 
-set a breakpoint and then check the .class.name, if that has an error it’s probably a map, and you can use .getClass().name In method 
+set a breakpoint and then check the .class.name, if that has an error it’s probably a map, and you can use `.getClass().name` In method 
 signatures, always put the types of the variable names, unless you are specifically using a dynamic type. If you are using a dynamic type
 in the java doc for the method list why you are using a dynamic type. This makes method signatures easier to figure out what they need to
-be called, and helps with IDE auto-completion.
+be called and helps with IDE auto-completion.
 
 ---
 
 As a general rule class files should be no larger than 500 to 600 lines, if you are going over that it may be time to think about refactoring
-into separate class files. Think about if all the functions actually go together logically. Also don't let your code go over 3000 lines
+into separate class files. Think about if all the functions actually go together logically. Also, don't let your code go over 3000 lines
 as there is an "issue" where the Groovy Compiler will exponentially slow down once you go over 3000 to 4000 lines of code.
 
 ---
 
 Don’t use closures in place of methods. Use closures if you are going to be passing them from one function to another, or are using the 
 closures delegation properties for a DSL. The reason for this is that they are a little slower and take up a little more memory. So it's a 
-balancing act of using closures where they make sense for thier power, but not to abuse that power and use them in place of methods. 
+balancing act of using closures where they make sense for their power, but not to abuse that power and use them in place of methods. 
 
 ---
 
