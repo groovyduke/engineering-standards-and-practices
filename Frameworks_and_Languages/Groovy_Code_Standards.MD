@@ -3,7 +3,7 @@
 Resources:
 * [Groovy Language Documentation](https://docs.groovy-lang.org/latest/html/documentation/) 
 * [Groovy Style Guide](https://groovy-lang.org/style-guide.html)
-* [Groovy Resources List](Original.MD)
+* [Groovy Resources List](./Original_Groovy_Resources.MD)
 
 ---
 
@@ -27,12 +27,12 @@ as there is an "issue" where the Groovy Compiler will exponentially slow down on
 
 Don’t use closures in place of methods. Use closures if you are going to be passing them from one function to another, or are using the 
 closures delegation properties for a DSL. The reason for this is that they are a little slower and take up a little more memory. So it's a 
-balancing act of using closures where the make sense for there power, but not to abuse that power and use them in place of methods. 
+balancing act of using closures where they make sense for thier power, but not to abuse that power and use them in place of methods. 
 
 ---
 
 When using closures in nontrivial examples instead of using the default `it` value, replace it with a more meaningful variable name and type.
-While thi is a trivial example instead of this :
+While this is a trivial example instead of this :
 ```
 List<Integer> numbers = [1,2,3,4]
 List doubles numbers.collect{ it *2}
@@ -128,9 +128,9 @@ For Strings use single quotes is you are not using templating
 String test  = 'something'
 ```
 
-Instead of using a String builder for simple concatenations you can use Groovy Strings, which use double quotes with 
+Instead of using a String builder for simple concatenations, you can use Groovy Strings, which use double quotes with 
 `${someVariable}` for templating. you can drop the curly brackets if as long as you are just using property access 
-and a `.` doesn't follow the expression. As a style consideration you could always use the curly brackets to avoid
+and a `.` doesn't follow the expression. As a style consideration, you could always use the curly brackets to avoid
 edge cases.
 
 Good examples:
