@@ -26,14 +26,14 @@ In Rest Controllers should represent the resources of your application and gener
 * Delete a resource `"/$controller/$id"(action: "delete", method: "DELETE")`
 
 For actions that fall outside traditional CRUD there isn't a set standard but what you should  follow is:
-* For actions and effect one resource the action name should proceed the id of the  resource like:
+* For actions that affect one resource the action name should proceed with the id of the  resource like:
 ```
 "/$controller/$id/$action"(method: "GET")
 "/$controller/$id/$action"(method: "POST")
 "/$controller/$id/$action"(method: "PUT")
 "/$controller/$id/$action"(method: "DELETE")
 ```
-* For actions that are general or effect many resources the action should be in place of the id:
+* For actions that are general or affect many resources the action should be in place of the id:
 ```
 "/$controller/$action"(method: "POST")
 "/$controller/$action"(method: "PUT")
