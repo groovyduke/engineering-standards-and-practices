@@ -23,10 +23,10 @@ everything is determined by annotations. So you can decide what structure/layout
 [Gradle Source Sets](https://docs.gradle.org/current/dsl/org.gradle.api.tasks.SourceSet.html). Regardless of where you put your code you could
 use the same structure of Grails or a "component" based structure like the project I'm currently working on.
 
-### Grails like structure under src/main/groovy.
-While not spelled out here you should use packaging to organize under the various categorize that the Grails like structure provides.
+### Grails-like structure under src/main/groovy.
+While not spelled out here you should use packaging to organize under the various categories that the Grails-like structure provides.
 
-I prefer this layout because from an information architecture perspective it makes it easy to guess where things will be based on their
+I prefer this layout because, from an information architecture perspective, it makes it easy to guess where things will be based on their
 type. Also, the guessability of location within categories can be helped by good naming of packages. One more benefit is that you can do
 a code search in a category very easily.
 
@@ -56,12 +56,12 @@ a code search in a category very easily.
   * GearService.groovy
 
 ### Component Based Structure
-This structure in my option seems to have roots from JavaScript, just because that's where I've seen it used the most, but I coule be wrong.
+This structure in my option seems to have roots in JavaScript, just because that's where I've seen it used the most, but I could be wrong.
 
 This structure can be good when you have reusable self-contained components. While not shown here you will cross-cutting code that doesn't
-fall under components. If you have more then one file per category of file, you may want to put them into sub packages for organization.
+fall under components. If you have more than one file per category of file, you may want to put them into sub-packages for organization.
 
-From an Information Architecture prespective this does give you the ability to guess where all the files are related to a component.
+From an Information Architecture perspective, this does give you the ability to guess where all the files are related to a component.
 
 Where I think this layout structure falls down is if you don't have self-contained components, and they have dependencies on each other.
 You also can't easily search through just one category of files.
@@ -106,7 +106,7 @@ You also can't easily search through just one category of files.
     * Validating command/data objects and return error messages
     * Calling services/repositories
     * Rendering output(JSON in most cases)
-    * Redirecting(should be avoided within most single page apps and APIs).
+    * Redirecting(should be avoided within most single-page apps and APIs).
 * Should be named with the postfix of `Controller`
 * Should probably be put off on a separate thread using @ExecuteOn.
 * All parameters should be bound using command objects, or in single parameters in the signature of the controller action(like for ids in the url).
@@ -119,7 +119,7 @@ You also can't easily search through just one category of files.
   * @Secured(SecurityRule.IS_AUTHENTICATED)
   * @Controller("/api/object")
   * @Slf4j
-* Controller method anotations:
+* Controller method annotations:
   * @Get\
     list
   * @Get("/{id}")\
@@ -177,7 +177,7 @@ If you want to do a validation that requires a DB lookup, that is business logic
 ## Repositories(Micronaut Data)
 * https://micronaut-projects.github.io/micronaut-data/latest/guide/
 * https://micronaut-projects.github.io/micronaut-data/latest/guide/#repositories
-* Where you put query logic for not dynamic queries in JPA/hibernate format, or native JDBC
+* Where you put query logic for not dynamic queries in JPA/hibernate format or native JDBC
 * Should be named with the postfix of Repository.
 * Should probably extend either CrudRepository or PageableRepository in most cases
 * Class level annotations:
@@ -222,7 +222,7 @@ https://docs.groovy-lang.org/latest/html/api/groovy/transform/AnnotationCollecto
 
 Micronaut seems to have an annotation for everything, which can make your classes look a little noisy. Groovy has an annotation collector
 which allows you to consolidate a bunch of commonly used annotations into one annotation. If you are using the same set of annotations say
-for Domain/Model objects you could make on annotation collector name it Domain or Model, and then put it on all your Domains/Models, except
+for Domain/Model objects you could make an annotation collector name it Domain or Model, and then put it on all your Domains/Models, except
 in the case for you do something different for a specific case.
 
 example:
