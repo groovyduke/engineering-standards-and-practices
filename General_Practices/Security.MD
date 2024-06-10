@@ -4,7 +4,7 @@ Security is tightly coupled so do your research before implementing it, because 
 parts of your security like the login(OAuth, saml, etc), and multi-factor auth, however deadening on the implementation this could be very
 complicated to implement and not well documented. I've found that OAuth is much simpler, better documented, and easier to implement than saml.
 Another thing to consider if you outsource security while they may be able to keep it more up to date than you, you don't control it and
-if there is an outage, or they get hacked you don't have a lot of recourse.
+if there is an outage, or they get hacked you don't have a lot of recourses.
 
 ## Permissioning
 

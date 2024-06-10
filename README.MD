@@ -58,7 +58,7 @@ These are my "good ideas" for engineering standards and practices:
 
 
 ### Presentations
-* [Groovy Basics](./Presentations/Groovy_Basics.MD)
+* [Groovy Basics](./Presentations/Groovy_Basics/Groovy_Basics.MD)
 * [Micronaut Basics](./Presentations/Micronaut_Basics.MD)
 * [Grails Basics](./Presentations/Grails_Basics.MD)
 * [Micronaut Basics](./Presentations/Micronaut_Basics.MD)
